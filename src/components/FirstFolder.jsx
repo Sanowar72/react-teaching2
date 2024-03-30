@@ -6,9 +6,6 @@ const FirstFolder = () => {
         consequuntur repudiandae similique iusto ex blanditiis perferendis
         nostrum praesentium? Eligendi!
       </p>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, aut.
-      </p>
     </>
   );
 };
