@@ -1,26 +1,32 @@
 import React, { useState } from "react";
-import Header from "./components/header/Header";
-import Counter from "./components/counter/Counter";
 
 const App = () => {
-  const [count, setCount] = useState(10);
-
-  // const increaseCount = () => {
-  //   for (let i = 1; i <= 5; i++) {
-  //     console.log("function running...");
-  //     setCount((p) => p + 1);
-  //   }
-  // };
-
+  const [count, setCount] = useState(0);
+  const increaseOne = () => {
+    setCount(count + 1);
+  };
   return (
     <>
-      <h1>this is count....{count}</h1>
+      <h1>this is count value {count}</h1>
+      <button onClick={increaseOne}>add one</button>
+      <button onClick={() => setCount(0)}>reset to 0</button>
       <button
         onClick={() => {
-          setCount(count + 1);
+          // if (count >= 0) {
+          //   setCount(count - 1);
+          // } else {
+          //   alert("Value must be positive");
+          // }
+          setCount((pre) => {
+            if (pre > 0) {
+              return pre - 1;
+            } else {
+              return 0;
+            }
+          });
         }}
       >
-        increase count
+        substract one
       </button>
     </>
   );
