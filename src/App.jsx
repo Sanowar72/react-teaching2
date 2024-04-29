@@ -12,11 +12,6 @@ const App = () => {
       <button onClick={() => setCount(0)}>reset to 0</button>
       <button
         onClick={() => {
-          // if (count >= 0) {
-          //   setCount(count - 1);
-          // } else {
-          //   alert("Value must be positive");
-          // }
           setCount((pre) => {
             if (pre > 0) {
               return pre - 1;
